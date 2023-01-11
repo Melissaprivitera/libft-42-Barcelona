@@ -6,11 +6,11 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:06:01 by melprivi          #+#    #+#             */
-/*   Updated: 2023/01/11 16:53:25 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/01/11 18:56:08 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int ft_isalpha(int c);
 
@@ -25,14 +25,14 @@ int main()
         printf("'A' is not an alphabetic character.\n");
     }
 } 
-
-int ft_isalpha(int c)
+*/
+int	ft_isalpha(int c)
 {
-    int bool;
+	int	b;
 
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        bool = 1;
-    else
-        bool = 0;
-    return (bool);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		b = 1;
+	else
+		b = 0;
+	return (b);
 }
