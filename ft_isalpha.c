@@ -6,11 +6,11 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:06:01 by melprivi          #+#    #+#             */
-/*   Updated: 2023/01/12 20:05:54 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/01/12 20:32:30 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- int	ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	int	b;
 
