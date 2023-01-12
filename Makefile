@@ -3,4 +3,3 @@ all: testfunctions.c
 
 clean:
 	rm -r testfunctions
-
