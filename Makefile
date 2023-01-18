@@ -6,13 +6,14 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/01/12 20:17:39 by melprivi         ###   ########.fr        #
+#    Updated: 2023/01/18 19:13:35 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME:= libft.a
 SRC:= 	testfunctions.c \
-		ft_isalpha.c 
+		ft_isalpha.c \
+		ft_isdigit.c
 
 FLAGS:= -Wall -Wextra -Werror
 RM:= rm -f
