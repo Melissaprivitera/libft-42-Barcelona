@@ -6,13 +6,13 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/01/24 17:38:14 by melprivi         ###   ########.fr        #
+#    Updated: 2023/01/24 17:51:06 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME:= libft.a
 SRC_F:= ft_isalpha ft_isdigit ft_isalnum \
-		ft_isascii ft_isprint
+		ft_isascii ft_isprint ft_strlen \
 
 FLAGS:= -Wall -Wextra -Werror
 CC:= gcc
