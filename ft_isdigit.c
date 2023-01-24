@@ -6,17 +6,14 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:07:57 by melprivi          #+#    #+#             */
-/*   Updated: 2023/01/19 21:29:11 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:11:22 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-    int	b;
-	
 	if (c >= '0' && c <= '9')
-		b = 1;
+		return (1);
 	else
-		b = 0;
-	return (b);
+		return (0);
 }

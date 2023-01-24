@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:08:20 by melprivi          #+#    #+#             */
-/*   Updated: 2023/01/19 21:29:17 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:48:21 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
-        return (1);
+		return (1);
 	else
 		return (0);
 }
