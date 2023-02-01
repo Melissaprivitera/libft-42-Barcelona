@@ -6,7 +6,7 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/01/25 14:37:16 by melprivi         ###   ########.fr        #
+#    Updated: 2023/01/25 17:30:17 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME:= libft.a
 SRC_F:= ft_isalpha ft_isdigit ft_isalnum \
 		ft_isascii ft_isprint ft_strlen \
 		ft_memset ft_bzero ft_memcpy \
-		ft_memmove
+		ft_memmove ft_strlcpy
 
 FLAGS:= -Wall -Wextra -Werror
 CC:= gcc
