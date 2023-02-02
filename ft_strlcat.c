@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:12:31 by melprivi          #+#    #+#             */
-/*   Updated: 2023/02/01 22:43:08 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/02/02 15:09:05 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-    int     j;
-	size_t	x;
+	size_t		dlen;
+	char		*d;
+	const char	*s;
 
-	i = 0;
-	j = 0;
-	x = ft_strlen(dst);
-	if ((dstsize == 0) || (dstsize < x))
-		return (x);
+	d = dst;
+	s = src;
+	if (ft_strlen(dst) > dstsize)
+		dlen = dstsize;
+	else
+		dlen = ft_strlen(dst);
+	if (dstsize == dlen)
+		return (dlen + ft_strlen(src));
+	if (ft_strlen(src) < (dstsize - dlen))
+	{
+		ft_memcpy(dst + dlen, src, ft_strlen(src) + 1);
+	}
 	else
 	{
-		while (i < x)
-		{
-			i++;
-		}
-		while ((i < (dstsize - x -1)) && (src[j] != '\0'))
-		{
-			dst[i] = src[j];
-			i++;
-			j++;
-		}
-		dst[i] = '\0';
-		return (ft_strlen(dst));	
+		ft_memcpy(dst + dlen, src, dstsize - dlen - 1);
+		dst[dstsize - 1] = '\0';
 	}
+	return (dlen + ft_strlen(src));
 }
