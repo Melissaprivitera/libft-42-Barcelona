@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:16:52 by melprivi          #+#    #+#             */
-/*   Updated: 2023/02/02 19:07:13 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/02/16 12:54:06 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 			i--;
 		if (s[i] == x)
 			return ((char *)&s[i]);
-		else
-			return (NULL);
 	}
+	return (NULL);
 }
