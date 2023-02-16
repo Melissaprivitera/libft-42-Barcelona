@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:12:31 by melprivi          #+#    #+#             */
-/*   Updated: 2023/02/02 15:09:05 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/02/16 21:37:38 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t		dlen;
-	char		*d;
-	const char	*s;
 
-	d = dst;
-	s = src;
 	if (ft_strlen(dst) > dstsize)
 		dlen = dstsize;
 	else
