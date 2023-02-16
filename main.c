@@ -6,64 +6,50 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 18:09:14 by melprivi          #+#    #+#             */
-/*   Updated: 2023/02/02 18:33:56 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:52:03 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-char	*ft_strchr(const char *s, int c);
+int	ft_strncmp(const char *s1, const char *s2, int n);
 
-int main (void)
-{
-    const char 	*s = "This \0is ae string";
-	int			c = 'i';
-	char		*str;
-	char		*str2;
-	int			i;
-
-	i = 0;
-	str = strchr(s, c);
-	str2 = ft_strchr(s, c);
-	printf("the result of strchr is %s \n", str);
-	printf("the address of %c in strchr is %p \n", (char)c, &str);
-	printf("the result of ft_strchr is %s \n", str2);
-	printf("the address of %c in ft_strchr is %p \n", (char)c, &str2);
-	while (i < ft_strlen(s))
-	{
-		printf("the address of %c is %p \n", s[i], &s[i]);
-		if (s[i] == c) 
-		{
-			printf("%c is in the %p position of the string\n", (char)c, &s[i]);
-		}
-		i++;
+int main() {
+    char str1[] = "abcdef";
+    char str2[] = "abcdeffghijklmnop";
+    int result = strncmp(str1, str2, 6); // Compare the first 5 characters of str1 and str2
+	int ft_result = ft_strncmp(str1, str2, 6); // compare with my function.
+    if (result < 0) {
+        printf("str1 is less than str2\n");
+	} else if (result > 0) {
+        printf("str1 is greater than str2\n");
+	} else {
+        printf("str1 is equal to str2 up to the first 8 characters\n");
 	}
+
+	if (ft_result < 0) {
+        printf("str1 is less than str2 in my function\n");
+	} else if (result > 0) {
+        printf("str1 is greater than str2 in my function\n");
+	} else {
+        printf("str1 is equal to str2 up to the first 8 characters in my function\n");
+	}
+    return 0;
 }
 
-char	*ft_strchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, int n)
 {
 	int	i;
+	int	res;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while ((s[i] != '\0') && (s[i] != (char)c))
-		i++;
-	return ((char *)&s[i]);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (n == 0)
+		return(0);
+	while (i < n && s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 	{
 		i++;
 	}
-	return (i);
+	res = (int)((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return (res);
 }
