@@ -6,7 +6,7 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/02/16 13:11:31 by melprivi         ###   ########.fr        #
+#    Updated: 2023/02/16 21:32:29 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC:= $(addsuffix .c, $(SRC_F))
 OBJS:= $(addsuffix .o, $(SRC_F))
 
 %.o: %.c  $(HEADER)
-	$(CC) $(FLAGS) -I $(HEADER) -c $< -o $@
+	$(CC) $(FLAGS) -I. -c $< -o $@
 
 all: $(NAME)
 	
