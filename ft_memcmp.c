@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 18:09:14 by melprivi          #+#    #+#             */
-/*   Updated: 2023/03/22 18:59:39 by melprivi         ###   ########.fr       */
+/*   Created: 2023/01/11 16:17:51 by melprivi          #+#    #+#             */
+/*   Updated: 2023/03/22 19:07:14 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-int main(void)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*s1;
-	char	*s2;
-	size_t	i;
-	int		result;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	int				res;
 
-	s1 = "esto es una prueba";
-	s2 = "esto tambien";
-	printf()
-
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+		{
+			res = str1[i] - str2[i];
+			return (res);
+		}
+		i++;
+	}
+	return (0);
 }
