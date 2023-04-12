@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 18:09:14 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/12 21:22:17 by melprivi         ###   ########.fr       */
+/*   Created: 2023/01/11 16:18:32 by melprivi          #+#    #+#             */
+/*   Updated: 2023/01/11 16:18:45 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-int main(void)
+int (const char *str)
 {
-	char str[] = "    +678abc/";
-
-	printf("this is the atoi() with my values: %i\n", atoi(str));
+    
 }
-
-
