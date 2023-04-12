@@ -6,13 +6,13 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:18:32 by melprivi          #+#    #+#             */
-/*   Updated: 2023/01/11 16:18:45 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:28:05 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int (const char *str)
+int ft_atoi(const char *str)
 {
     
 }
