@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 18:09:14 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/24 22:00:28 by melprivi         ###   ########.fr       */
+/*   Created: 2023/04/24 18:07:55 by melprivi          #+#    #+#             */
+/*   Updated: 2023/04/24 22:28:18 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-int main(void)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	*str;
-	int		i;
+	unsigned char	*ptr;
+	unsigned int	s;
 
-	i = 0;
-	str = (char *)malloc(10 * 8);
-	if (str)
+	s = count * size;
+	ptr = (unsigned char *)malloc(s);
+	if (count == 0)
 	{
-		while (str[i] != '\0')
-		{
-			printf("malloc works the result is: %c \n", str[i]);
-			i++;
-		}
-	}
-	else 
 		exit (1);
+		free (ptr);
+	}
+	else if (size == 0)
+		return (NULL);
+	else
+	{
+		ft_bzero(ptr, s);
+		return (ptr);
+	}
+	free (ptr);
+	ptr = NULL;
 }
-
 
