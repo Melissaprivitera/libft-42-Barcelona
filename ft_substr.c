@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:32:10 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/26 17:03:45 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:06:08 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 
 	i = 0;
-	
 	if ((start + len) > ft_strlen(s))
 		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
