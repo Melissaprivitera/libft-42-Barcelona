@@ -6,80 +6,69 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:45:19 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/28 00:32:05 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/04/28 23:19:50 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	count(char const *s, char c);
-size_t	wordlen(char *s, char c);
+int		count(char const *s, char c);
+char	**split(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
 	char		**array;
-	size_t		count;
+
 	if (!s)
-		return ("");
-	count = count(s, c);
-	array = (char **)malloc(sizeof(char *) * (count + 1));
-	*array[count + 1] = NULL;
-	if (!**array)
-		return (NULL);
-	array = funcion para asignar los substrings;
+		return (0);
+	array = split(s, c);
 	return (array);
 }
 
- int	count(char const *s, char c)
- {
-	int	i;
+int	count(char const *s, char c)
+{
 	int	count;
 
-	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] == c) && (s[i + 1] != c)
+		while (*s == c)
+			s++;
+		if (*s)
 			count++;
-		i++;
+		while ((*s != c) && (*s))
+			s++;
 	}
 	return (count);
- }
+}
 
- int	wordlen(char *s, char c)
- {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
-		i++;
-	return(i + 1);
- }
-
- char **subtrings(char *s, char **array, char c)
- {
-	int 	i;
-	int		count;
-	char	*substr;
+char	**split(char const *s, char c)
+{
+	char	**array;
+	int		i;
+	int		len;
 
 	i = 0;
-	count = 0;
-	while (*array[i] != NULL)
+	array = (char **)malloc(sizeof(char *) * (count(s, c) + 1));
+	if (!array)
+		return (NULL);
+	while (*s)
 	{
-		ft_strchr(s, c);
-			substr = (char *)malloc(sizeof(char) * count);
-			if (!substr);
-			{
-				freearray(array);
-				return (NULL);
-			}
-			substr = ft_substr(s, 0, count)
-			array[i] = substr;
+		while ((*s == c) && *s)
+			s++;
+		if (*s)
+		{
+			if (ft_strchr(s, c))
+				len = ft_strchr(s, c) - s;
+			else
+				len = ft_strlen(s);
+			array[i] = ft_substr(s, 0, len);
 			i++;
+			s = s + len;
 		}
 	}
-	return (array);	
+	array[i] = NULL;
+	return (array);
  }
-
-
+ 
