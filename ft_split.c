@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:45:19 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/28 23:19:50 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/04/29 21:14:36 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,21 @@
 #include <stdlib.h>
 
 int		count(char const *s, char c);
-char	**split(char const *s, char c);
+char	**split(char **array, char const *s, char c);
+char	**freearray(char **array, int i);
 
 char	**ft_split(char const *s, char c)
 {
-	char		**array;
+	char	**array;
 
 	if (!s)
 		return (0);
-	array = split(s, c);
+	array = (char **)malloc(sizeof(char *) * (count(s, c) + 1));
+	if (!array)
+		return (array);
+	array = split(array, s, c);
+	if (array == NULL)
+		free(array);
 	return (array);
 }
 
@@ -43,16 +49,12 @@ int	count(char const *s, char c)
 	return (count);
 }
 
-char	**split(char const *s, char c)
+char	**split(char **array, char const *s, char c)
 {
-	char	**array;
 	int		i;
 	int		len;
 
 	i = 0;
-	array = (char **)malloc(sizeof(char *) * (count(s, c) + 1));
-	if (!array)
-		return (NULL);
 	while (*s)
 	{
 		while ((*s == c) && *s)
@@ -60,15 +62,29 @@ char	**split(char const *s, char c)
 		if (*s)
 		{
 			if (ft_strchr(s, c))
-				len = ft_strchr(s, c) - s;
+			len = ft_strchr(s, c) - s;
 			else
 				len = ft_strlen(s);
 			array[i] = ft_substr(s, 0, len);
+			if (array[i] == NULL)
+				return (freearray(array, i));
 			i++;
 			s = s + len;
 		}
 	}
 	array[i] = NULL;
 	return (array);
- }
- 
+}
+
+char	**freearray(char **array, int i)
+{
+	while (i >= 0)
+	{
+		free(array[i]);
+		array[i] = NULL;
+		i--;
+	}
+	free(array);
+	array = NULL;
+	return (array);
+}
