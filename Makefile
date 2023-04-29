@@ -6,7 +6,7 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/04/30 00:37:53 by melprivi         ###   ########.fr        #
+#    Updated: 2023/04/30 01:36:19 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC_F:= ft_isalpha ft_isdigit ft_isalnum \
 		ft_calloc ft_strdup ft_substr \
 		ft_strjoin ft_strtrim ft_split ft_itoa \
 		ft_strmapi ft_striteri ft_putchar_fd \
-		ft_putstr_fd
+		ft_putstr_fd ft_putendl_fd ft_putnbr_fd \
 
 FLAGS:= -Wall -Wextra -Werror
 CC:= gcc
