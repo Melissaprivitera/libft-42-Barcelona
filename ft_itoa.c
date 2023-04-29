@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 00:38:41 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/29 23:50:47 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/04/29 23:55:11 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int		ft_count(int n);
 char	*phrase(char *num, int n, int flag);
-char 	*iszero(void);
+char	*iszero(void);
 char	*reverse(char *num);
 
 char	*ft_itoa(int n)
@@ -23,11 +23,11 @@ char	*ft_itoa(int n)
 	int		flag;
 	int		count;
 	char	*num;
-	
+
 	count = 0;
 	flag = 0;
-	if(n == -2147483648)
-		return ft_strdup("-2147483648");
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (iszero());
 	if (n < 0)
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	return (phrase(num, n, flag));
 }
 
-char 	*iszero(void)
+char	*iszero(void)
 {
 	char	*num;
 
@@ -57,14 +57,14 @@ char 	*iszero(void)
 
 char	*phrase(char *num, int n, int flag)
 {
-	int i;
+	int	i;
 	int	rem;
 
 	i = 0;
 	while (n > 0)
 	{
 		rem = n % 10;
-		num[i++] = rem + '0'; 
+		num[i++] = rem + '0';
 		n = n / 10;
 	}
 	if (flag)
@@ -88,13 +88,13 @@ int	ft_count(int n)
 
 char	*reverse(char *num)
 {
-	int start;
-	int end;
-	int temp;
+	int	start;
+	int	end;
+	int	temp;
 
 	start = 0;
 	end = ft_strlen(num) - 1;
-	while (start < end) 
+	while (start < end)
 	{
 		temp = num[start];
 		num[start] = num[end];
