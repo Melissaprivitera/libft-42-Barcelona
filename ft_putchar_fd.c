@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 18:09:14 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/30 01:05:30 by melprivi         ###   ########.fr       */
+/*   Created: 2023/04/30 00:25:30 by melprivi          #+#    #+#             */
+/*   Updated: 2023/04/30 00:34:56 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-	return (0);
+	write(fd, &c, sizeof(c));
 }
