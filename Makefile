@@ -6,7 +6,7 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/05/03 00:15:01 by melprivi         ###   ########.fr        #
+#    Updated: 2023/05/03 00:27:14 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC:= $(addsuffix .c, $(SRC_F))
 OBJS:= $(addsuffix .o, $(SRC_F))
 
 SRC_B:= ft_lstnew ft_lstadd_front ft_lstsize \
-		ft_lstlast 
+		ft_lstlast ft_lstadd_back
 
 SRC2:= $(addsuffix .c, $(SRC_B))
 OBJS2:= $(addsuffix .o, $(SRC_B))
