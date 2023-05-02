@@ -6,7 +6,7 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/05/02 22:20:48 by melprivi         ###   ########.fr        #
+#    Updated: 2023/05/02 22:37:36 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC_F:= ft_isalpha ft_isdigit ft_isalnum \
 SRC:= $(addsuffix .c, $(SRC_F))
 OBJS:= $(addsuffix .o, $(SRC_F))
 
-SRC_B:= ft_lstnew ft_lstadd_front \
+SRC_B:= ft_lstnew ft_lstadd_front ft_lstsize \
 
 SRC2:= $(addsuffix .c, $(SRC_B))
 OBJS2:= $(addsuffix .o, $(SRC_B))
