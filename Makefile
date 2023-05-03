@@ -6,7 +6,7 @@
 #    By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 19:00:57 by melprivi          #+#    #+#              #
-#    Updated: 2023/05/03 00:27:14 by melprivi         ###   ########.fr        #
+#    Updated: 2023/05/03 18:22:55 by melprivi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,8 @@ OBJS:= $(addsuffix .o, $(SRC_F))
 SRC_B:= ft_lstnew ft_lstadd_front ft_lstsize \
 		ft_lstlast ft_lstadd_back
 
-SRC2:= $(addsuffix .c, $(SRC_B))
-OBJS2:= $(addsuffix .o, $(SRC_B))
+SRCB:= $(addsuffix .c, $(SRC_B))
+OBJSB:= $(addsuffix .o, $(SRC_B))
 
 FLAGS:= -Wall -Wextra -Werror
 CC:= gcc
@@ -43,19 +43,19 @@ RM:= rm -f
 
 # ********************************* RULES ************************************ #
 
-%.o: %.c  $(HEADER) $(OBJS) $(OBJS2)
+%.o: %.c  $(HEADER) $(OBJS) $(OBJSB)
 	$(CC) $(FLAGS) -I. -c $< -o $@
 
-bonus: $(OBJS) $(OBJS2)
-	ar rcs $(NAME) $(OBJS) $(OBJS2)
-
 all: $(NAME)
+
+bonus: $(OBJS) $(OBJSB)
+	ar rcs $(NAME) $(OBJS) $(OBJSB)
 	
 $(NAME): $(OBJS)
 	ar rcs $@ $(OBJS)
 
 clean:
-	$(RM) $(OBJS) $(RM) $(OBJS2)
+	$(RM) $(OBJS) $(RM) $(OBJSB)
 	
 fclean: clean	
 	$(RM) $(NAME)
