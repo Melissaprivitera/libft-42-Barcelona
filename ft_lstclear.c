@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:17:32 by melprivi          #+#    #+#             */
-/*   Updated: 2023/05/03 23:48:05 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:27:32 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	temp = *lst;
 	while (head)
 	{
-		temp = temp->next;
 		ft_lstdelone(head, del);
+		temp = temp->next;
 		head = temp;
 	}
 	*lst = head;
