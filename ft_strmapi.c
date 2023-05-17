@@ -6,12 +6,11 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 23:56:44 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/30 00:10:17 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:42:26 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

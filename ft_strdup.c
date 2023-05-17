@@ -6,12 +6,11 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:39:52 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/25 17:28:35 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:41:37 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

@@ -6,17 +6,17 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 00:38:41 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/29 23:55:11 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:35:53 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		ft_count(int n);
-char	*phrase(char *num, int n, int flag);
-char	*iszero(void);
-char	*reverse(char *num);
+static int		ft_count(int n);
+static char		*phrase(char *num, int n, int flag);
+static char		*iszero(void);
+static char		*reverse(char *num);
 
 char	*ft_itoa(int n)
 {
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	return (phrase(num, n, flag));
 }
 
-char	*iszero(void)
+static char	*iszero(void)
 {
 	char	*num;
 
@@ -55,7 +55,7 @@ char	*iszero(void)
 	return (num);
 }
 
-char	*phrase(char *num, int n, int flag)
+static char	*phrase(char *num, int n, int flag)
 {
 	int	i;
 	int	rem;
@@ -73,7 +73,7 @@ char	*phrase(char *num, int n, int flag)
 	return (reverse(num));
 }
 
-int	ft_count(int n)
+static int	ft_count(int n)
 {
 	int	count;
 
@@ -86,7 +86,7 @@ int	ft_count(int n)
 	return (count);
 }
 
-char	*reverse(char *num)
+static char	*reverse(char *num)
 {
 	int	start;
 	int	end;

@@ -6,12 +6,11 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:32:10 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/27 17:42:06 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:43:20 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

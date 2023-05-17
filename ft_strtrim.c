@@ -6,12 +6,11 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:27:25 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/27 17:41:06 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:42:55 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

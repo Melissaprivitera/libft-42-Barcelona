@@ -6,16 +6,15 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:45:19 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/29 21:14:36 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:59:55 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int		count(char const *s, char c);
-char	**split(char **array, char const *s, char c);
-char	**freearray(char **array, int i);
+static int	word_count(char const *s, char c);
+static char	**divide(char **array, char const *s, char c);
+static char	**freearray(char **array, int i);
 
 char	**ft_split(char const *s, char c)
 {
@@ -23,16 +22,16 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	array = (char **)malloc(sizeof(char *) * (count(s, c) + 1));
+	array = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!array)
 		return (array);
-	array = split(array, s, c);
+	array = divide(array, s, c);
 	if (array == NULL)
 		free(array);
 	return (array);
 }
 
-int	count(char const *s, char c)
+static int	word_count(char const *s, char c)
 {
 	int	count;
 
@@ -49,7 +48,20 @@ int	count(char const *s, char c)
 	return (count);
 }
 
-char	**split(char **array, char const *s, char c)
+static char	**freearray(char **array, int i)
+{
+	while (i >= 0)
+	{
+		free(array[i]);
+		array[i] = NULL;
+		i--;
+	}
+	free(array);
+	array = NULL;
+	return (array);
+}
+
+static char	**divide(char **array, char const *s, char c)
 {
 	int		i;
 	int		len;
@@ -73,18 +85,5 @@ char	**split(char **array, char const *s, char c)
 		}
 	}
 	array[i] = NULL;
-	return (array);
-}
-
-char	**freearray(char **array, int i)
-{
-	while (i >= 0)
-	{
-		free(array[i]);
-		array[i] = NULL;
-		i--;
-	}
-	free(array);
-	array = NULL;
 	return (array);
 }

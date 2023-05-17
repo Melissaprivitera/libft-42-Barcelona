@@ -6,14 +6,14 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 01:18:10 by melprivi          #+#    #+#             */
-/*   Updated: 2023/04/30 01:36:43 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:37:52 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	print(int n, int fd);
-void	num(int i, int fd);
+static void	print(int n, int fd);
+static void	num(int i, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -33,7 +33,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-void	num(int n, int fd)
+static void	num(int n, int fd)
 {
 	if (n > 0)
 	{
@@ -42,7 +42,7 @@ void	num(int n, int fd)
 	}
 }
 
-void	print(int i, int fd)
+static void	print(int i, int fd)
 {
 	char	ascii;
 
