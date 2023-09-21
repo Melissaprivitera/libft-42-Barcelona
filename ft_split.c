@@ -6,7 +6,7 @@
 /*   By: melprivi <melprivi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:45:19 by melprivi          #+#    #+#             */
-/*   Updated: 2023/05/09 23:59:55 by melprivi         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:39:31 by melprivi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,6 @@ static int	word_count(char const *s, char c)
 	return (count);
 }
 
-static char	**freearray(char **array, int i)
-{
-	while (i >= 0)
-	{
-		free(array[i]);
-		array[i] = NULL;
-		i--;
-	}
-	free(array);
-	array = NULL;
-	return (array);
-}
-
 static char	**divide(char **array, char const *s, char c)
 {
 	int		i;
@@ -85,5 +72,18 @@ static char	**divide(char **array, char const *s, char c)
 		}
 	}
 	array[i] = NULL;
+	return (array);
+}
+
+static char	**freearray(char **array, int i)
+{
+	while (i >= 0)
+	{
+		free(array[i]);
+		array[i] = NULL;
+		i--;
+	}
+	free(array);
+	array = NULL;
 	return (array);
 }
